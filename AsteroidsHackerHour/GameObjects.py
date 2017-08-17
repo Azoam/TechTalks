@@ -1,5 +1,4 @@
 import abc
-import sys
 
 class Entity:
     
@@ -22,9 +21,13 @@ class Entity:
 class Player(Entity):
 
     def __init__(self):
+        self.x_vel = 0
+        self.y_vel = 0
+
         self.x_cords = [100, 80, 90, 110, 120]
         self.y_cords = [100, 150, 140, 140, 150]
         self.point_list = [] 
+
         Entity.__init__(self, 10, 10, 10, 10)
     
     def draw(self, g, game_display):
@@ -33,5 +36,6 @@ class Player(Entity):
 
         g.lines(game_display, (255,255,255), True, self.point_list, 2)
 
-def update(self):
-        pass
+    def update(self):
+        pass 
+        
