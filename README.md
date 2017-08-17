@@ -16,7 +16,7 @@
 ##### Installing Dependencies
 pygame installation: 
 1. Windows: TBD
-2. Mac: `brew install pyhton-pygame`
+2. Mac: `brew install python-pygame`
 3. Ubuntu `chmod + x pygame_install && ./pygame_install`
 
 ---
