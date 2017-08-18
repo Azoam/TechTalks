@@ -7,6 +7,7 @@ SCREEN_SIZE = (800,600)
 TITLE = "Asteroids"
 CRASHED = False
 
+
 #very first thing you need to do
 pygame.init()
 

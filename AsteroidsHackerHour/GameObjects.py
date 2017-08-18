@@ -1,6 +1,10 @@
+#system level imports
+from random import randint
 import abc
 import pygame
 
+#user level imports
+from Main import SCREEN_SIZE
 import Colors
 
 
@@ -59,9 +63,10 @@ class Asteroid(Entity):
     def __init__(self):
         Entity.__init__(self, 100, 100, 1, 1) 
         self.radius = 10
-
-        self.x_vel = 2
-        self.y_vel = 2
+        
+        #spawns with random direction
+        self.x_vel = randint(-4,4)
+        self.y_vel = randint(-4,4)
     
     #TODO: Implement random shape later, temp using as circle
     def _create_shape():
@@ -72,6 +77,20 @@ class Asteroid(Entity):
         g.circle(game_display, Colors.WHITE, self.pos, 10, 1)
 
     def update(self, e):
-       self.x += self.x_vel
-       self.y += self.y_vel
+        self.x += self.x_vel
+        self.y += self.y_vel
+       
+        if self.x < 0:
+            self.x =  SCREEN_SIZE[0]
+        elif self.x > SCREEN_SIZE[0]:
+            self.x = self.radius
+        elif self.y < 0:
+            self.y = SCREEN_SIZE[1]
+        elif self.y > SCREEN_SIZE[1]:
+            self.y = self.radius
+
+
+
+
+
         
