@@ -2,7 +2,7 @@
 import pygame
 
 #user created imports
-import Colors
+from Constants import Colors
 import GameStates
 import GameObjects
 

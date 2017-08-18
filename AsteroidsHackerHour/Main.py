@@ -1,19 +1,15 @@
 import pygame
 import GameStates, TestState
 
-#constants
-FPS = 60
-SCREEN_SIZE = (800,600)
-TITLE = "Asteroids"
-CRASHED = False
+from Constants import GameData, Colors
 
 
 #very first thing you need to do
 pygame.init()
 
 #setting up window settings
-game_display = pygame.display.set_mode(SCREEN_SIZE)
-pygame.display.set_caption(TITLE)
+game_display = pygame.display.set_mode(GameData.SCREEN_SIZE)
+pygame.display.set_caption(GameData.TITLE)
 
 #creating game state manager
 test_state = TestState.Test(game_display)
@@ -23,16 +19,16 @@ game_state_manager = GameStates.StateManager(test_state)
 clock = pygame.time.Clock()
 
 #create gameloop
-while not CRASHED:
+while not GameData.CRASHED:
     
     #get input
     for event in pygame.event.get():
 
         if event.type == pygame.QUIT:
-            CRASHED = True
+            GameData.CRASHED = True
 
     #draw over previous frame & update
-    game_display.fill((0,0,0))
+    game_display.fill(Colors.BLACK)
 
     #game state update & render
     game_state_manager.update_current_state(pygame.event)

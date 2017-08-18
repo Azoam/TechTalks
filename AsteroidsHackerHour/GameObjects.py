@@ -4,8 +4,7 @@ import abc
 import pygame
 
 #user level imports
-from Main import SCREEN_SIZE
-import Colors
+from Constants import Colors, GameData
 
 
 class Entity:
@@ -81,12 +80,12 @@ class Asteroid(Entity):
         self.y += self.y_vel
        
         if self.x < 0:
-            self.x =  SCREEN_SIZE[0]
-        elif self.x > SCREEN_SIZE[0]:
+            self.x =  GameData.SCREEN_SIZE[0]
+        elif self.x > GameData.SCREEN_SIZE[0]:
             self.x = self.radius
         elif self.y < 0:
-            self.y = SCREEN_SIZE[1]
-        elif self.y > SCREEN_SIZE[1]:
+            self.y = GameData.SCREEN_SIZE[1]
+        elif self.y > GameData.SCREEN_SIZE[1]:
             self.y = self.radius
 
 
