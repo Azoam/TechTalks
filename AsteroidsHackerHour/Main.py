@@ -26,9 +26,6 @@ while not CRASHED:
     
     #get input
     for event in pygame.event.get():
-    
-        #logging events
-        print(event)
 
         if event.type == pygame.QUIT:
             CRASHED = True
@@ -37,13 +34,11 @@ while not CRASHED:
     game_display.fill((0,0,0))
 
     #game state update & render
-    game_state_manager.update_current_state()
+    game_state_manager.update_current_state(pygame.event)
     game_state_manager.draw_current_state(pygame.draw)
-
-
+    
+    #update the frame and update the game clock
     pygame.display.update()
-
-
     clock.tick(60)
 
 #if exited loop, close window and quit game

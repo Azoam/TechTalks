@@ -17,7 +17,7 @@ class State:
         return
     
     @abc.abstractmethod
-    def update(self):
+    def update(self, e):
         return
 
 class StateManager:
@@ -29,8 +29,8 @@ class StateManager:
     def draw_current_state(self, g):
         self._current_state.draw(g)
 
-    def update_current_state(self):
-        self._current_state.update()
+    def update_current_state(self, e):
+        self._current_state.update(e)
 
     def set_state(self, new_state):
         self._current_state = new_state
