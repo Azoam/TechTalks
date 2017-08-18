@@ -6,7 +6,7 @@ from Constants import Colors
 import GameStates
 import GameObjects
 
-class Test(GameStates.State):
+class GameScreen(GameStates.State):
     
     def __init__(self, game_display):
         GameStates.State.__init__(self, game_display)

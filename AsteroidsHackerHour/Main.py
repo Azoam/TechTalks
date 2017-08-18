@@ -1,7 +1,7 @@
 import pygame
-import GameStates, TestState
 
 from Constants import GameData, Colors
+import GameStates, GameScreens
 
 
 #very first thing you need to do
@@ -12,7 +12,7 @@ game_display = pygame.display.set_mode(GameData.SCREEN_SIZE)
 pygame.display.set_caption(GameData.TITLE)
 
 #creating game state manager
-test_state = TestState.Test(game_display)
+test_state = GameScreens.GameScreen(game_display)
 game_state_manager = GameStates.StateManager(test_state)
 
 #Used a game clock to impose a certain FPS
