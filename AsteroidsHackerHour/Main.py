@@ -23,7 +23,6 @@ while not GameData.CRASHED:
     
     #get input
     for event in pygame.event.get():
-
         if event.type == pygame.QUIT:
             GameData.CRASHED = True
 
