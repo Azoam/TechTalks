@@ -17,7 +17,7 @@
 pygame installation: 
 1. Windows: [Windows Install Tutorial](https://www.webucator.com/blog/2015/03/installing-the-windows-64-bit-version-of-pygame/)
 2. Mac: `brew install python-pygame`
-3. Ubuntu `chmod + x pygame_install && ./pygame_install`
+3. Ubuntu `chmod + x pygame_install && sudo ./pygame_install`
 
 ---
 
