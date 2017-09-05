@@ -1,0 +1,14 @@
+Entity	entities.py	/^class Entity(pygame.Rect):$/
+GameScreen	gamescreen.py	/^class GameScreen:$/
+Player	entities.py	/^class Player(Entity):$/
+__init__	entities.py	/^    def __init__(self, x, y, width, height):$/
+__init__	entities.py	/^    def __init__(self, x, y, width, height):$/
+__init__	gamescreen.py	/^    def __init__(self):$/
+draw	entities.py	/^    def draw(self, game_display):$/
+draw	entities.py	/^    def draw(self, game_display):$/
+draw	gamescreen.py	/^    def draw(self, game_display):$/
+has_collided	entities.py	/^    def has_collided(self, rect):$/
+input	gamescreen.py	/^    def input(self):$/
+update	entities.py	/^    def update(self):$/
+update	entities.py	/^    def update(self):$/
+update	gamescreen.py	/^    def update(self):$/

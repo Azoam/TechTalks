@@ -1,5 +1,7 @@
+#module imports
 import pygame
 
+#personal imports
 import colors
 import gamescreen 
 
