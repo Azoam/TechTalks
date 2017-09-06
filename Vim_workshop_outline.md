@@ -1,18 +1,19 @@
 Modal Typing:
 1. Insert: Allows you to type
 2. Visual: Allows you to highlight (usually for deleting)
-3. Visual Block: Allows you to highligh a block
+3. Visual Block: Allows you to highlight a rectangular block of text
 4. Replace: Allows you to type over text
-5. Normal: Home base
+5. Normal: Root mode
 
 
 Inserting:
-1. Basic Insert Mode: `i`
+1. Enter insert Mode: `i`
 2. Move over a character and enter insert mode: `a`
-3. Jump to end of line in insert mode: `A`
-4. Jump to beginning of line in insert mode: `I`
-5. Create a new line one line below, move to down to new line and insert mode: `o`
-6. Create a new line one line up, move down to new line  and enter insert mode: `O`
+3. Delete currently selected character and enter insert mode: `s`
+4. Jump to end of line in insert mode: `A`
+5. Jump to beginning of line in insert mode: `I`
+6. Create a new line one line below, move to down to new line and enter insert mode: `o`
+7. Create a new line one line up, move up to new line and enter insert mode: `O`
 
 
 Normal:
@@ -22,9 +23,10 @@ Normal:
 
 Visual Mode:
 1. To start highlighting: `v`
-2. Use arrow keys (or home row) to highlight
+2. Use arrow keys (or home row) to highlight more characters
 3. Delete highlighted text: `d`
 4. To paste just deleted text: `p`
+5. Use mouse to move cursor and highlight: `:set mouse=a`
 
 
 Replace Mode:
