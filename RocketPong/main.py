@@ -29,7 +29,7 @@ while not CRASHED:
     game_clock.tick(60)
 
     for event in pygame.event.get():
-        if event.type == pygame.QUIT:
+        if event.key == pygame.QUIT:
             CRASHED = True
 
 #if game crashed, exit pygame and python

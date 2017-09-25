@@ -7,13 +7,13 @@ import colors
 
 #base class for all objects in the game
 class Entity(pygame.Rect):
-    
+
     __metaclass__ = ABCMeta
 
     def __init__(self, x, y, width, height):
         self.x = x
         self.y = y
-        self.width = width 
+        self.width = width
         self.height = height
 
     def has_collided(self, rect):
@@ -21,28 +21,29 @@ class Entity(pygame.Rect):
             return True
 
         return False
-    
+
     @abstractmethod
     def update(self):
-        return 
-    
+        return
+
     @abstractmethod
     def draw(self, game_display):
-        return 
+        return
 
 #player class that we will control
 class Player(Entity):
-    
+
     def __init__(self, x, y, width, height):
-        super().__init__(x, y, width, height)
+        super(x, y, width, height)
 
     def update(self):
         events = pygame.event.get()
         for event in events:
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_UP:
+                if event.key == pygame.UP:
+                    print("pressing up")
                     self.y = self.y - 1
-                if event.key == pygame.K_DOWN:
+                if event.key == pygame.DOWN:
                     self.y = self.y + 1
 
     def draw(self, game_display):

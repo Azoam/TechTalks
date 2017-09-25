@@ -49,7 +49,7 @@ class Player(Entity):
         for event in e.get():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.LEFT:
-                    pass
+                    print("test")
                 if event.key == pygame.RIGHT:
                     pass
                 if event.key == pygame.UP:

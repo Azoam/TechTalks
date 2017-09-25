@@ -1,1 +1,1 @@
-__all__ = ["Colors.py","Main.py"]
+__all__ = ["colors.py", "main.py", "entities.py", "gamescreen.py"]

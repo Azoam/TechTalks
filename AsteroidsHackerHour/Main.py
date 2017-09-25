@@ -1,4 +1,5 @@
 import pygame
+import sys
 
 from Constants import GameData, Colors
 import GameStates, GameScreens
